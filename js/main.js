@@ -26,7 +26,9 @@ function addCSS(fileName, crossorigin, integrity) {
 
 function generateTopLink(to) {
     if (window.location.hostname === '') {
-        return window.location.pathname.substring(0, window.location.pathname.indexOf('babakism.github.com')) + to;
+        console.log('Luft');
+        var gitRepo = 'babakism.github.com'
+        return window.location.pathname.substring(0, window.location.pathname.indexOf(gitRepo)) + gitRepo + to;
     } else {
         return to;
     }
