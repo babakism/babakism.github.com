@@ -26,6 +26,8 @@ function populateNavbar() {
 window.addEventListener('load', function () {
     populateNavbar();
 
+    window.document.title = Object.keys(pages).find(key => pages[key] === window.location.pathname);
+
     /*var metaCharsetTag = document.createElement('meta');
     metaCharsetTag.setAttribute('charset', 'utf-8');
     document.head.appendChild(metaCharsetTag);*/
