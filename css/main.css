@@ -1,0 +1,26 @@
+/*
+ * This CSS file contains source for all the html pages.
+ */
+
+body {
+    margin: 0px;
+}
+
+ #wrapper {
+    margin: auto;
+    width: 80%;
+    background-color: red;
+    min-height: 80vh;
+    padding: 10px;
+ }
+
+#wrapper nav {
+     background-color: blue;
+     padding: 5px;
+     margin: -10px;
+}
+    
+#wrapper nav a {  
+    color: black;
+    margin: 6px;
+ }
