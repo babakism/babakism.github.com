@@ -6,8 +6,20 @@ let pages = {
     'FAQ': '/faq.html',
 }
 
+function generateTopLink(to) {
+    //window.location.
+}
+
 function populateNavbar() {
     var navTag = document.getElementsByTagName('nav')[0];
+
+    var homeTag = document.createElement('i');
+    var homeContainer = document.createElement('a');
+    homeContainer.href = '/index.html'
+    homeTag.classList.add('fas', 'fa-calculator', 'home-button');
+    homeContainer.appendChild(homeTag);
+    navTag.appendChild(homeContainer);
+
     if (navTag) {
         for (var linkName in pages) {
             var location = pages[linkName];
