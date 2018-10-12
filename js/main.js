@@ -3,7 +3,7 @@
 let pages = {
     'Admins': '/admins.html',
     'Holy Scriptures': '/scripts.html',
-    'FAQ': '/faq.html'
+    'FAQ': '/faq.html',
 }
 
 function populateNavbar() {
