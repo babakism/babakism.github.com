@@ -25,8 +25,9 @@ function addCSS(fileName, crossorigin, integrity) {
 }
 
 function generateTopLink(to) {
-    if (window.location.hostname === '') {
-        console.log('Luft');
+    if (to.startsWith('http')) {
+        return to;
+    } else if (window.location.hostname === '') {
         var gitRepo = 'babakism.github.com'
         return window.location.pathname.substring(0, window.location.pathname.indexOf(gitRepo)) + gitRepo + to;
     } else {
@@ -59,11 +60,14 @@ function populateNavbar() {
     }
 }
 
+
 window.addEventListener('load', function () {
     populateNavbar();
 
     window.document.title = Object.keys(pages).find(key => pages[key] === window.location.pathname);
+});
 
+(function installCSS() {
     addCSS('https://use.fontawesome.com/releases/v5.3.1/css/all.css', 'anonymous', 'sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU');
-    addCSS('/css/main.css')
-})
+    addCSS('/css/main.css');
+})();
